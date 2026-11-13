@@ -1,0 +1,43 @@
+PAINEL FLOW - COMPRA DE DÍVIDA
+==============================
+
+A planilha já está pronta e já está compartilhada com a conta de serviço
+(painel@painel-flow-513520.iam.gserviceaccount.com). Você NÃO precisa fazer isso.
+
+Planilha: https://docs.google.com/spreadsheets/d/1BLuHK5KZ555oNWG8yShZ6waBIJNkwW-30CDU5EOH0eY
+
+PASSO A PASSO (uns 10 minutos)
+------------------------------
+1) GitHub: crie um repositório PRIVADO novo (ex.: painel-divida) e envie TODOS
+   os arquivos desta pasta para a raiz dele (index.html, dados.mjs, acao.mjs,
+   arquivo.mjs, auth.mjs, regras.mjs, sheets.mjs, blobs.mjs, netlify.toml,
+   package.json). Pode arrastar pela tela do GitHub ("Add file > Upload files").
+
+2) Netlify: "Add new site > Import from GitHub" e escolha esse repositório.
+   Não precisa mexer em nada do build (o netlify.toml já faz tudo).
+
+3) Em Site settings > Environment variables, crie duas variáveis:
+   SHEET_ID = 1BLuHK5KZ555oNWG8yShZ6waBIJNkwW-30CDU5EOH0eY
+   GOOGLE_SERVICE_ACCOUNT = (o mesmo JSON que você usa no painel do consórcio)
+
+4) Em Deploys > Trigger deploy > Deploy site (pra pegar as variáveis).
+
+5) Copie o endereço do site (algo.netlify.app) e cole na planilha, aba Config,
+   célula B2 (site_url). Com isso a coluna "Link" da aba Acessos mostra o link
+   de cada pessoa. É só mandar o link da Melissa pra ela.
+
+COMO FUNCIONA O ACESSO
+----------------------
+Cada pessoa entra por um link: seusite.netlify.app/?k=CHAVE
+As chaves estão na aba Acessos. Para tirar o acesso de alguém, troque "sim"
+por "não" na coluna Ativo. Para trocar a chave, escreva outra.
+
+IMPORTANTE ANTES DE USAR
+------------------------
+- Aba Listas: os finais de número 2288, 4410, 7035 e 9921 são EXEMPLOS.
+  Troque pelos 4 reais (ou use Ajustes no painel, só o Rafael vê).
+- Bancos, produtos, operações, prazos, vínculos e etapas também se editam em
+  Ajustes, dentro do painel.
+- Anexos (prints e PDFs) ficam guardados no próprio Netlify, não na planilha.
+  Cada arquivo pode ter até uns 4 MB; fotos são reduzidas automaticamente.
+- A aba Log registra quem fez o quê.
